@@ -1,74 +1,27 @@
 
-<section>
-  <header class="grid-middle">
-    <div class="col-3">
-      <div>
-        <a href="/" class="logo"> <img data-src="/images/logos/river-schriftzug.png" class="header-logo lazy"> </a>
+<header class="grid relative">
+  <div class="col-6_sm-12 lazy sm-min-height-50 padded bg-image bg-header-left" style="background-image:  url('{{ page.header-image }}') ;">
+  </div>
+  <div class="col-6_sm-12 padded bg-light">
+    <nav class="header-nav relative">
+      <a href="{{site.data.nav.url-1 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-1 %}current{% endif %}"> {{site.data.nav.text-1}} </a>
+      <a href="{{site.data.nav.url-2 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-2 %}current{% endif %}"> {{site.data.nav.text-2}} </a>
+      <a href="{{site.data.nav.url-3 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-3 %}current{% endif %}"> {{site.data.nav.text-3}} </a>
+      <div class="dropdown-content-mobile">
+        <a href="{{site.data.nav.url-4 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-4 %}current{% endif %}"> {{site.data.nav.text-4}} </a>
+        <a href="{{site.data.nav.url-5 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-5 %}current{% endif %}"> {{site.data.nav.text-5}} </a>
+        <a href="{{site.data.nav.url-6 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-6 %}current{% endif %}"> {{site.data.nav.text-6}} </a>
+        <a href="{{site.data.nav.url-7 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-7 %}current{% endif %}"> {{site.data.nav.text-7}} </a>
+        <a href="{{site.data.nav.url-8 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-8 %}current{% endif %}"> {{site.data.nav.text-8}} </a>
       </div>
-    </div> 
-    <nav class="col-9 hide-md right">
-      <a href="/"> Start </a>
-      <a href="/ueber-mich"> Über mich </a>
-      <div class="dropdown">
-        <a href="/tierkinesiologie.html" class="dropdown-title"> Tierkinesiologie </a>
-        <div class="dropdown-content">
-          <a href="/energetik.html"> Energetik </a>
-          <a href="/tierkommunikation.html"> Tierkommunikation </a>
-          <a href="/heilsteine.html"> Heilsteine </a>
-          <a href="/reiki.html"> Reiki </a>
-          <a href="/farbtherapie.html"> Farbtherapie </a>
-          <a href="/bachblueten.html"> Bachblüten </a>
-        </div>
-      </div>
-      <a href="/shop"> Shop </a>
-      <a href="/kontakt"> Kontakt </a>
-      <a href="/termin-buchen" class="featured"> Termin buchen </a>
-    </nav> 
-    <div class="col-7 right show-md">
-      <div class="burger-button">
-        <span class="burger-top"></span>
-        <span class="burger-middle"></span>
-        <span class="burger-bottom"></span>
-    </div>
-    </div>
-  </header>
-</section>
+      <a href="{{site.data.nav.url-9 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-9 %}current{% endif %}"> {{site.data.nav.text-9}} </a>
+      <a href="{{site.data.nav.url-10 | replace:'.html',''}}" class="nav-links {% if page.url == site.data.nav.url-10 %}current{% endif %}"> {{site.data.nav.text-10}} </a>
+
+      <a href="/" class="logo-header"> <img data-src="/icons/hauptlogo.png" class="logo-header lazy"> </a>
+    </nav>
+  </div>
+</header>
 
   
-<div class="mobile-menu"> 
-  <div class="mobile-logo">
-    <img data-src="/images/logos/r-logo.png" class="lazy">
-  </div>
-  <nav> 
-    <a href="/"> Start </a>
-    <a href="/ueber-mich"> Über mich </a>
-    <a href="/tierkinesiologie.html"> Tierkinesiologie </a>
-    <div class="dropdown-content-mobile">
-      <a href="/energetik.html"> Energetik </a>
-      <a href="/tierkommunikation.html"> Tierkommunikation </a>
-      <a href="/heilsteine.html"> Heilsteine </a>
-      <a href="/reiki.html"> Reiki </a>
-      <a href="/farbtherapie.html"> Farbtherapie </a>
-      <a href="/bachblueten.html"> Bachblüten </a>
-    </div>
-    <a href="/termin-buchen"> Termin buchen </a>
-    <a href="/shop"> Shop </a>
-    <a href="/kontakt"> Kontakt </a>
-  </nav>
-</div> 
 
 
-<!-- 
-  {% for link in site.archives %}
-              <a href="{{link.url}}"> {{ link.category | capitalize }} </a>
-          {% endfor %}
-
---> 
-
-
-<!-- 
-  {% for link in site.archives %}
-              <a href="{{link.url}}"> {{ link.category | capitalize }} </a>
-          {% endfor %}
-
---> 

@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem "jekyll"
+gem "jekyll", "4.2.0"
+gem "webrick"
+
 
 gem "jekyll-sitemap"

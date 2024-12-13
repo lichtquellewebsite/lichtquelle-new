@@ -1,0 +1,37 @@
+---
+layout: default
+title: Seminare | Lichtquelle
+seo:
+  title: Seminare | Lichtquelle
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+header-image: /images/seminare/seminare-header.jpg
+---
+
+
+
+
+<section class="margin-t-2">
+    {% for seminar in site.data.seminare.seminare %}
+
+    <section class="capped-width grid-middle-spaceAround padded padded-b-1 margin-b-2">
+        <div class="col-3_sm-12-top padded-1-custom seminar-datum-bg">
+            <p class="emphasis border-t sm-padded-t-1"> {{ seminar.datum }}</p>
+        </div>
+        <div class="col-8_sm-12 padded-1-custom border-l bg-featured-seminare ">
+            <h3> {{ seminar.title }} </h3>
+             {{ seminar.description_html }} 
+             <div>
+                <a href="{{ seminar.anmelden }}" class="button margin-b-1"> Anmelden </a>
+             </div>
+            <div>
+                <img data-src="{{ seminar.image }}" class="padded-t-1 lazy" />
+            </div>
+        </div>
+    </section>
+
+{% endfor %}
+</section>

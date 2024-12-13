@@ -1,5 +1,10 @@
 /* ----------- Color Variables --------- */
-/* Looking for the color variables? They have been moved to the inline-styles file in the _includes folder, and pull variables from the site-settings folder in the _data folder.  */
+/* Looking for the color variables? They have been moved to the inline-styles file in the _includes folder, and pull variables from the site-settings folder in the _data folder. 
+
+font-family: 'Cormorant Infant', serif;
+font-family: 'Raleway', sans-serif;
+
+*/
 
 /* ----------- CSS RESET --------- */
 
@@ -114,9 +119,52 @@ html {
 
 .bg-dark     { background-color: var(--dark);}
 .bg-featured { background-color: var(--featured);}
+
+.bg-featured-seminare {
+  background-color: var(--featured);
+  border-radius: 2rem;
+  padding: 5%;
+}
+.seminar-datum-bg {
+  background-color: var(--dark);
+  border-radius: 10rem;
+  padding: 3%;
+  color: white;
+  text-align: center;
+}
+.seminar-datum-bg p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
 .bg-medium   { background-color: var(--medium); }
 .bg-light    { background-color: var(--light); }
 .bg-v-light  { background-color: var(--v-light); }
+
+.text-white { color: white;}
+
+.image-left img {
+  position: absolute;
+  left: -5rem;
+  top: 6rem;
+  width: 25vw;
+  border-radius: 3rem;
+}
+
+
+.image-right img {
+  position: absolute;
+  right: -5rem;
+  top: 6rem;
+  width: 25vw;
+  border-radius: 3rem;
+}
+
+.border-bottom { 
+  border-bottom: 1px solid;
+  display: inline-block;
+ }
 
 .bg-image {
     background-color: var(--light); /* Set a fall-back color while images are loading */ 
@@ -125,6 +173,13 @@ html {
     background-position: center; 
     background-repeat: no-repeat;
 }
+
+.round-edges { border-radius: 2rem;}
+
+.bg-image-header {
+  background-image: url('/images/index/index-1.jpg');
+}
+.bg-index-3 { background-image: url('/images/index/index-3.jpg');}
 
 .bg-overlay::after {
   z-index: 1;
@@ -157,10 +212,16 @@ html {
 
 a.bg-image { display: block;}
 
+.landscape-custom { padding-bottom: 30%;}
+.landscape-custom-2 { padding-bottom: 23%;}
 .landscape     { padding-bottom: 66% ; }
 .portrait-tall { padding-bottom: 175%; }
 .portrait      { padding-bottom: 125%; }
 .square        { padding-bottom: 100%; }
+
+.border-radius-1 { border-radius: 14rem; }
+.border-radius-2 { border-radius: 12rem; }
+.border-radius { border-radius: 3rem;}
 
 
 /* Background Position */
@@ -176,18 +237,26 @@ a.bg-image { display: block;}
 .right   { text-align: right; }
 .center  { text-align: center; }
 .uppercase    { text-transform: uppercase; }
+.quote { 
+  font-size: 2rem;
+  font-family: 'Cormorant Infant', serif;
+}
 
 body {
-  font-family: 'Mulish', serif;  /* Add your font here */ 
+  font-family: 'Raleway', sans-serif;  /* Add your font here */ 
   color: var(--dark-text);
 }
 
 h2, h3, h4, h5, h6 {
   line-height: 1.1;
   margin-bottom: 1.2rem;
+  font-family: 'Cormorant Infant', serif;
 }
 
-h2 { font-size: 2rem; }
+h2 { 
+  font-size: calc(1em + 2.4vw);
+  font-weight: 500;
+ }
 h3 { font-size: 1.8rem; }
 h4 { font-size: 1.6rem; }
 h5 { font-size: 1.4rem; }
@@ -196,9 +265,9 @@ h6 { font-size: 1.2rem; }
 p, li {
   line-height: 1.4; 
   margin-bottom: 1rem;
-  font-family: 'Martel', serif; 
-  font-weight: 200;
-  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
 }
 
 h2:last-child, 
@@ -234,7 +303,7 @@ a {
 }
 
 a:hover {
-  color: var(--featured-text); 
+  color: var(--light); 
 }
 
 p a {
@@ -243,7 +312,7 @@ p a {
 }
 
 p a:hover { 
-  color: var(--featured-text); 
+  color: var(--dark); 
 }
 
 .button { 
@@ -252,10 +321,15 @@ p a:hover {
     line-height: 1;
     padding: 0.5rem 1.5rem;
     border: 1px solid;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'Cormorant Infant', serif;
 }
 
 .button:hover {
-    color: var(--featured-text);
+    color: var(--dark);
+    background-color: var(--light);
+    border: 1px solid var(--dark);
 }
 
 .subtle-button {
@@ -268,20 +342,99 @@ p a:hover {
 
 
 /* ------------ Header & Hamburger Menu -------------- */
-header {
-    padding: 1rem 5%;
+
+.dropdown-content-mobile a {
+  font-size: calc(0.9em + 1.8vw);
+  font-style: italic;
+  font-weight: 300;
 }
 
-nav a {
+.current {
+  padding: 0;
+  margin: 0.25rem 0.5rem;
+  border-bottom: 1px solid var(--dark);
+  color: var(--dark);
+  display: inline-block;
+}
+
+.index-behandlungen-nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.index-behandlungen-nav a:last-child {
+	margin-bottom: 0;
+}
+
+header nav a {
     padding: 0.25rem 0.5rem;
-    display: inline-block;
+    display: block;
     text-decoration: none;
+    font-family: 'Cormorant Infant', serif;
+    font-size: calc(1em + 1.9vw);
+    font-weight: 500;
 }
 nav a:hover {
-  color: var(--featured-text);
+  color: var(--dark); 
+}
+
+.logo-header {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 12rem;
+}
+
+
+ul{
+  margin-left: 2rem;
+}
+
+/* -------------------- Custom Positions --------------------*/
+
+.margin-r-custom { margin-right: 5%;}
+
+.custom-position-1 {
+  position: absolute;
+  right: 23%;
+  left: 23%;
+  top: 12%;
+  z-index: 1;
+}
+
+.margin-t-custom-1 {
+  margin-top: 42%;
+  padding-bottom: 11%;
+}
+
+.margin-custom-1 {
+  margin-right: 5%;
+  margin-bottom: 2%;
+  
+}
+
+.img-custom-position-1 {
+  position: absolute;
+  top: 3rem;
+  z-index: 0;
+}
+
+
+.bluete-position-1 {
+  position:absolute;
+  bottom: 14%;
+  right: 33%;
+  width: 10rem;
+  z-index: 0;
 }
 
 /* ------------ Footer Styles -------------- */
+
+.footer-logo {
+  width: 14rem;
+}
 
 footer a {
   text-align: center;
@@ -289,6 +442,10 @@ footer a {
   text-decoration: none;
   padding: 0.2rem 0 0.2rem 0.2rem;
   font-weight: 200;
+}
+
+footer a:hover {
+    color: var(--dark);
 }
 
 footer nav a {
@@ -313,6 +470,11 @@ footer nav a {
 
 
 /* Dropdown styles */
+
+.dropdown-content-mobile {
+  text-align: left;
+  padding-left: 1rem;
+}
 
 .dropdown { 
   position: relative; 
@@ -345,6 +507,10 @@ footer nav a {
 .dropdown-content a {
   display: block;
   padding: 0.2rem;
+}
+
+.flex-flip {
+  flex-flow: row-reverse wrap;
 }
 
 /* ------------ Burger Button / Mobile Menu Styles -------------- */
@@ -521,7 +687,7 @@ select {
   padding: 0.5rem;
   font-family: inherit;
   font-size: 1rem;
-  border: 2px solid var(--medium);
+  border: 2px solid var(--dark);
   color: var(--dark-text);
   background-color: white;
 }
@@ -533,7 +699,7 @@ option {
   padding: 0.5rem;
   font-family: inherit;
   font-size: 1rem;
-  border: 2px solid var(--medium);
+  border: 2px solid var(--dark);
   color: var(--dark-text);
   background-color: white;
 }
@@ -551,7 +717,7 @@ input, textarea {
   padding: 0.5rem;
   font-family: inherit;
   font-size: 1rem;
-  border: 2px solid var(--medium);
+  border: 2px solid var(--dark);
   color: var(--dark-text);
   background-color: white;
 }
@@ -560,7 +726,7 @@ input, textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border: 2px solid var(--light);
+  border: 2px solid var(--featured);
 }
 
 
@@ -635,8 +801,24 @@ hr.short.center {
 
 @media(max-width:64em) {
 
+  .logo-header {
+    width: 10rem;
+  }
+
 	.show-md { display: block; }
 	.hide-md { display: none;  }
+
+  .bluete-position-1 {
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 9rem;
+    z-index: 0;
+  }
+
+  .index-behandlungen-nav a {
+    font-size: 1.8rem;
+}
 
 }
 
@@ -645,6 +827,10 @@ hr.short.center {
 
 
 @media(max-width:48em) {
+
+  .seminar-datum-bg {
+    margin-bottom: 0.5rem;
+  }
 
 	.show-sm { display: block; }
 	.hide-sm { display: none;  }
@@ -667,6 +853,35 @@ hr.short.center {
   .sm-portrait      { padding-bottom: 125%; }
   .sm-square        { padding-bottom: 100%; }
 
+  .sm-min-height-50 { min-height: 70vh}
+
+  .logo-header {
+    position: absolute;
+    top: -7px;
+    right: -12px;
+    width: 9rem;
+  }
+
+  .index-behandlungen-nav a {
+    font-size: 1.6rem;
+}
+
+.image-right img {
+  position: absolute;
+  right: -3rem;
+  top: 6rem;
+  width: 25vw;
+  border-radius: 3rem;
+}
+
+.image-left img {
+  position: absolute;
+  left: -3rem;
+  top: 6rem;
+  width: 25vw;
+  border-radius: 3rem;
+}
+
 }
 
 /* ------- XS Media Query (36em / 576px) --------------- */ 
@@ -681,4 +896,37 @@ hr.short.center {
       font-weight: 300;
       font-family: 'Martel', serif; 
     }
+
+    .sm-min-height-50 { min-height: 40vh}
+
+
+    .logo-header {
+      position: absolute;
+      top: -2px;
+      right: -7px;
+      width: 8rem;
+      z-index: 0;
+    }
+
+    .bluete-position-1 {
+      position:absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 5rem;
+      z-index: 0;
+    }
+
+    .index-behandlungen-nav a {
+      font-size: 1.4rem;
+  }
+
+  .button {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+  
+
 }

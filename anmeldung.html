@@ -1,0 +1,64 @@
+---
+layout: default
+title: Anmeldung
+header-bg: bg-dark
+swiper: true
+seo:
+  title:
+  description:
+  social_image:
+  twitter_card:
+  keywords:
+  hide-from-google: false
+themen:
+  - titel: >-
+      Tages Seminar | Einweihung in deine 3 lemurianischen Kristalle n. Natara©
+      | 25. August 2024 | Hotel Wilerbad Sarnen
+  - titel: Herzenslichtkörperprozess 1 - 12 Chakra n. Natara©
+  - titel: Aktivierung der goldenen Kristallinen DNA n. Natara©
+  - titel: Blaupause n. Natara©
+header-image: /images/anmeldung/anmeldung-header.jpg
+---
+<section class="padded bg-dark text-white">
+    <div class="editable center address">
+        <h2> Ich freue mich auf deine Anmeldung. </h2>
+    </div>
+</section>
+
+
+<section class="padded capped-width-v-narrow">
+    <form action="https://formspree.io/f/meqywzew" method="POST">
+        <label for="_vorname"> Vorname </label>
+        <input type="text" name="_vorname" id="_vorname" />
+
+        <label for="_nachname"> Nachname </label>
+        <input type="text" name="_nachname" id="_nachname" />
+
+        <label for="_adresse"> Strasse, Nr. </label>
+        <input type="text" name="_adresse" id="_adresse" />
+
+        <label for="_wohnort"> PLZ, Wohnort </label>
+        <input type="text" name="_wohnort" id="_wohnort" />
+   
+        <label for="_replyto"> Email </label>
+        <input type="email" name="_replyto" id="_replyto" />
+
+        <label for="phone"> Telefonnummer </label>
+        <input type="tel" id="phone" name="phone" pattern="+[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}" /> 
+
+        <label for="_seminar"> Ich interessiere mich für... </label>
+        <select name="_seminar" id="_seminar">
+            <option value="" disabled selected hidden> Option auswählen </option>
+            {% for thema in page.themen %}
+            <option> {{ thema.titel }} </option>
+            {% endfor %}
+        </select>
+   
+        <label for="message"> Nachricht </label>
+        <textarea name="message" id="message"></textarea>
+   
+        <button type="submit" class="button"> Abschicken </button>
+    </form>
+
+    
+</section>
