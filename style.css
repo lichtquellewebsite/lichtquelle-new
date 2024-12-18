@@ -181,6 +181,8 @@ html {
 }
 .bg-index-3 { background-image: url('/images/index/index-3.jpg');}
 
+.bg-index-5 { background-image: url('/images/index/bg-index-5.jpg')}
+
 .bg-overlay::after {
   z-index: 1;
   content: ""; 
