@@ -544,6 +544,11 @@ footer nav a {
   cursor: pointer;
   
 }
+
+.zertifikat {
+  width: 10rem;
+  padding-right: 0;
+}
 /*this is where you can chand the color of the buttons*/
 
 .burger-button-index span{
